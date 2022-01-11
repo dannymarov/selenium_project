@@ -1,0 +1,27 @@
+============================= test session starts =============================
+platform win32 -- Python 3.9.7, pytest-6.2.5, py-1.11.0, pluggy-1.0.0 -- C:\Program Files\Python39\python.exe
+cachedir: .pytest_cache
+rootdir: C:\dev\SeleniumProject
+collecting ... collected 2 items
+
+src/test_scenario.py::test_sample_pytst /n Test1:yeah this is the first pytest
+PASSED
+src/test_scenario.py::test_sample_pytst2 /n Test2:yeah this is the first pytest
+FAILED
+
+================================== FAILURES ===================================
+_____________________________ test_sample_pytst2 ______________________________
+
+    @pytest.mark.mySecondCase
+    @pytest.mark.regression
+    def test_sample_pytst2():
+        print('/n Test2:yeah this is the first pytest')
+>       assert 25 / 5 == 65
+E       assert 5.0 == 65
+E         +5.0
+E         -65
+
+src\test_scenario.py:35: AssertionError
+=========================== short test summary info ===========================
+FAILED src/test_scenario.py::test_sample_pytst2 - assert 5.0 == 65
+=================== 1 failed, 1 passed, 5 warnings in 0.12s ===================
